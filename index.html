@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+  <!-- SwiperJS CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Subavana Travel</title>
@@ -73,6 +77,14 @@
         <h3>Dieng 3D2N</h3>
         <p>Mulai dari Rp 700.000</p>
       </div>
+      <div class="paket-item" data-aos="fade-up">
+        <h3>Jepang 4D3N</h3>
+        <p>Mulai dari Rp 4.000.000</p>
+      </div>
+      <div class="paket-item" data-aos="fade-up">
+        <h3>Bangkok 5D4N</h3>
+        <p>Mulai dari Rp 5.000.000</p>
+      </div>    
   </section>
 
   <section id="galeri" class="galeri">
@@ -98,8 +110,30 @@
       <h3>Sefian</h3>
       <p>Presiden Direktur</p>
     </div>
+    <div class="anggota">
+      <img src="images/tim3.png" alt="Bryan - Customer Service" />
+      <h3>Bryan</h3>
+      <p>General Manager</p>
   </div>
 </section>
+
+<!-- Galeri Desain (Swiper Slider) -->
+<section class="galeri-slider">
+  <h2>Promotion</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/desain1.jpg" alt="Desain 1" /></div>
+      <div class="swiper-slide"><img src="images/desain2.jpg" alt="Desain 2" /></div>
+      <div class="swiper-slide"><img src="images/desain3.jpg" alt="Desain 3" /></div>
+    </div>
+    <!-- Panah Navigasi -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- Titik Navigasi -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
 
   <section class="testimoni" data-aos="fade-up">
     <h2>Apa Kata Mereka?</h2>
@@ -112,6 +146,48 @@
       <span>- Fathi, Surabaya</span>
     </div>
   </section>
+
+<section class="blog" id="blog">
+  <h2>Blog Traveling</h2>
+
+  <div class="swiper blog-slider">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide blog-post">
+        <img src="images/blog-tips.jpg" alt="Tips Liburan" class="blog-img" />
+        <h3>5 Tips Hemat Liburan ke Pulau Seribu</h3>
+        <p class="tanggal">Diposting 17 Juni 2025</p>
+        <p>Yuk simak tips hemat berikut ini...</p>
+        <a href="blog1.html" class="read-more">Baca Selengkapnya</a>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide blog-post">
+        <img src="images/blogfoto2.jpg" alt="Hidden Gem" class="blog-img" />
+        <h3>One Day Trip Bandung</h3>
+        <p class="tanggal">17 Juni 2025</p>
+        <p>One Day Trip ke Bandung, Worth It Nggak?”</p>
+        <a href="blog2.html" class="read-more">Baca Selengkapnya</a>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide blog-post">
+        <img src="images/blogfoto3.jpg" alt="Hidden Gem" class="blog-img" />
+        <h3>Staycation di Jakarta</h3>
+        <p class="tanggal">17 Juni 2025</p>
+        <p>Staycation Seru di Hotel Instagramable Jakarta”</p>
+        <a href="blog3.html" class="read-more">Baca Selengkapnya</a>
+      </div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
 
   <section id="kontak" class="kontak" data-aos="fade-up">
     <h2>Hubungi Kami</h2>
@@ -132,5 +208,45 @@
     AOS.init();
   </script>
   <script src="script.js"></script>
+
+  <!-- SwiperJS JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    spaceBetween: 20,
+  });
+</script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiperBlog = new Swiper(".blog-slider", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
 </body>
 </html>
